@@ -1,0 +1,91 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Merkez_Nokta.master.cs" Inherits="Merkez_Nokta"%>
+<%@ Register Src="~/Blok/Sol_Menu.ascx" TagPrefix="uc1" TagName="Sol_Menu" %>
+<%@ Register Src="~/Blok/Ust_Menu.ascx" TagPrefix="uc1" TagName="Ust_Menu" %>
+<%@ Register Src="~/Blok/Alt_Menu.ascx" TagPrefix="uc1" TagName="Alt_Menu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head runat="server">
+    <!-- js, css, tag dosyalarý -->
+    <title>Bölge Grup Yönetim Sistemi</title>
+    <!-- No Bot -->
+    <meta name="ROBOTS" content="NOINDEX, FOLLOW"/>
+    <meta name="ROBOTS" content="INDEX, NOFOLLOW"/>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
+    <meta name="googlebot" content="noindex" />
+    <meta name="googlebot-news" content="nosnippet"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="/Desing/Default/css/bootstrap.min.css?v=8.0" rel="stylesheet" type="text/css"/>
+    <link href="/Desing/Default/css/londinium-theme.min.css?v=8.0" rel="stylesheet" type="text/css"/>
+    <link href="/Desing/Default/css/styles.min.css?v=8.0" rel="stylesheet" type="text/css"/>
+    <link href="/Desing/Default/css/icons.min.css?v=8.0" rel="stylesheet" type="text/css"/>
+    <link href="/Desing/Default/css/css.css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/jquery-ui.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/charts/sparkline.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/uniform.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/select2.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/inputmask.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/autosize.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/inputlimit.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/listbox.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/multiselect.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/validate.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/tags.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/switch.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/uploader/plupload.full.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/uploader/plupload.queue.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/wysihtml5/wysihtml5.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/forms/wysihtml5/toolbar.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/interface/daterangepicker.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/interface/fancybox.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/interface/moment.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/interface/jgrowl.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/interface/datatables.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/interface/colorpicker.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/interface/fullcalendar.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/interface/timepicker.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/plugins/interface/collapsible.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/bootstrap.min.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Default/js/application.js?v=8.0"></script>
+    <script type="text/javascript" src="/Desing/Paket/engelleme/engelleme.js?v=8.0"></script>
+    <link rel="stylesheet" href="/Desing/Paket/onoffstyle/css/style.css?v=8.0" />
+    <script type="text/javascript" src="/Desing/Paket/komut/custom.js?v=8.0"></script>
+    <!--<script type="text/javascript" src="/Desing/Default/js/rufdisable.js"></script>-->
+</head>
+<body class="sidebar-wide" onload="startTime()">
+    <form id="form1" runat="server">
+        <!-- Update Panellerin Çalýþmasý Ýçin Gerekli Javascript .net Eklentisi -->
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" EnableScriptGlobalization="true" ></asp:ScriptManager>
+
+        <!-- Tasarýmda Üst Menu -->
+        <uc1:Ust_Menu runat="server" ID="Ust_Menu" />
+        <!-- Son Tasarýmda Üst Menu -->
+
+        <div class="page-container">
+            <!-- Tasarýmda Sol Menü -->
+            <uc1:Sol_Menu runat="server" ID="Sol_Menu" />
+            <!-- Tasarýmda Sol Menü -->
+
+            <div class="page-content">
+                <!-- Tasarýmda Ýlk Açýlýþ Ana Sayfa -->
+                <asp:Label ID="mesaj" runat="server" Text=""></asp:Label>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <!-- Son Tasarýmda Ýlk Açýlýþ Ana Sayfa -->
+
+                <!-- Tasarýmýn Alt Menüsü -->
+                <uc1:Alt_Menu runat="server" ID="Alt_Menu" />
+                <!-- Son Tasarýmýn Alt Menüsü -->
+            </div>
+        </div>
+    </form>
+
+    <!--Küçük Not Mesajlarý -->
+    <link href="/Desing/Paket/message/toastinette.min.css?v=8.0" rel="stylesheet" type="text/css" />
+    <script src="/Desing/Paket/message/toastinette.min.js?v=8.0"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <!--Son Küçük Not Mesajlarý -->
+</body>
+</html>

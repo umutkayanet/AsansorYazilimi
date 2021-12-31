@@ -1,0 +1,13 @@
+.print table {
+	font-size:12px;
+}
+
+.print table th {
+	font-weight:bold;
+}
+
+.print_baslik {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #e5e5e5;
+}
